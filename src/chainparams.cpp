@@ -105,9 +105,9 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
     }
 }
 
-void MineGenesis(CBlock genesis, uint256 nProofOfWorkLimit){
+void MineGenesis(CBlock genesis, uint256 bnProofOfWorkLimit){
     // This will figure out a valid hash and Nonce if you're creating a differe$
-    uint256 hashTarget = nProofOfWorkLimit;
+    uint256 hashTarget = bnProofOfWorkLimit;
     printf("Target: %s\n", hashTarget.GetHex().c_str());
     uint256 newhash = genesis.GetHash();
     uint256 besthash;
@@ -190,7 +190,7 @@ public:
         genesis.nNonce   = 411540;
         hashGenesisBlock = genesis.GetHash();
 
-        if (true) { MineGenesis(genesis, nProofOfWorkLimit); }
+        if (true) { MineGenesis(genesis, bnProofOfWorkLimit); }
 
         assert(hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
