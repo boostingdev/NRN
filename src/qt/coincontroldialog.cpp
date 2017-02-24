@@ -584,7 +584,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog *dialog, Neuron
 void CoinControlDialog::updateView()
 {
     bool treeMode = ui->radioTreeMode->isChecked();
-    
+
     LOCK(cs_main);
 
     ui->treeWidget->clear();
