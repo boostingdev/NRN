@@ -481,17 +481,17 @@ bool NeuronBridge::sendCoins(bool fUseCoinControl, QString sChangeAddr)
                 inputType = 0;
                 break;
             case TXT_NRN_TO_ANON:
-                formatted.append(tr("<b>%1</b> to SHADOW %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::NRN, rcp.amount), Qt::escape(rcp.label), rcp.address));
+                formatted.append(tr("<b>%1</b> to NEURON %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::NRN, rcp.amount), Qt::escape(rcp.label), rcp.address));
                 inputType = 0;
                 nAnonOutputs++;
                 break;
             case TXT_ANON_TO_ANON:
-                formatted.append(tr("<b>%1</b> SHADOW, ring size %2 to SHADOW %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::NRN, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
+                formatted.append(tr("<b>%1</b> NEURON, ring size %2 to NEURON %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::NRN, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
                 inputType = 1;
                 nAnonOutputs++;
                 break;
             case TXT_ANON_TO_NRN:
-                formatted.append(tr("<b>%1</b> SHADOW, ring size %2 to NRN %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::NRN, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
+                formatted.append(tr("<b>%1</b> NEURON, ring size %2 to NRN %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::NRN, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
                 inputType = 1;
                 break;
             default:

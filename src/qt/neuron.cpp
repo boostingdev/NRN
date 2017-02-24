@@ -23,8 +23,8 @@
 #include <QLibraryInfo>
 #include <QTimer>
 
-#if defined(SHADOW_NEED_QT_PLUGINS) && !defined(_SHADOW_QT_PLUGINS_INCLUDED)
-#define _SHADOW_NEED_QT_PLUGINS
+#if defined(NEURON_NEED_QT_PLUGINS) && !defined(_NEURON_QT_PLUGINS_INCLUDED)
+#define _NEURON_NEED_QT_PLUGINS
 #define __INSURE__
 #include <QtPlugin>
 Q_IMPORT_PLUGIN(qcncodecs)
@@ -112,7 +112,7 @@ static void handleRunawayException(std::exception *e)
     exit(1);
 }
 
-#ifndef SHADOW_QT_TEST
+#ifndef NEURON_QT_TEST
 int main(int argc, char *argv[])
 {
     fHaveGUI = true;
@@ -293,4 +293,4 @@ int main(int argc, char *argv[])
     }
     return 0;
 }
-#endif // SHADOW_QT_TEST
+#endif // NEURON_QT_TEST

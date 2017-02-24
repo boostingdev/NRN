@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SHADOWGUI_H
-#define SHADOWGUI_H
+#ifndef NEURONGUI_H
+#define NEURONGUI_H
 
 #include <QMainWindow>
 #include <QWebView>

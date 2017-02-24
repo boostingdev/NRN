@@ -1080,18 +1080,18 @@ Dies bedeutet eine Gebühr von min %2 ist benötigt</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; to SHADOW %2 (%3)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; zu SHADOW %2 (%3)</translation>
+        <source>&lt;b&gt;%1&lt;/b&gt; to NEURON %2 (%3)</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt; zu NEURON %2 (%3)</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; SHADOW, ring size %2 to SHADOW %3 (%4)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; SHADOW, Ring Größe %2 zu SHADOW %3 (%4)</translation>
+        <source>&lt;b&gt;%1&lt;/b&gt; NEURON, ring size %2 to NEURON %3 (%4)</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt; NEURON, Ring Größe %2 zu NEURON %3 (%4)</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; SHADOW, ring size %2 to NRN %3 (%4)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; SHADOW, Ring Größe %2 zu NRN %3 (%4)</translation>
+        <source>&lt;b&gt;%1&lt;/b&gt; NEURON, ring size %2 to NRN %3 (%4)</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt; NEURON, Ring Größe %2 zu NRN %3 (%4)</translation>
     </message>
     <message>
         <location line="+4"/>

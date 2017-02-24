@@ -1080,17 +1080,17 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; to SHADOW %2 (%3)</source>
+        <source>&lt;b&gt;%1&lt;/b&gt; to NEURON %2 (%3)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; SHADOW, ring size %2 to SHADOW %3 (%4)</source>
+        <source>&lt;b&gt;%1&lt;/b&gt; NEURON, ring size %2 to NEURON %3 (%4)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; SHADOW, ring size %2 to NRN %3 (%4)</source>
+        <source>&lt;b&gt;%1&lt;/b&gt; NEURON, ring size %2 to NRN %3 (%4)</source>
         <translation type="unfinished"/>
     </message>
     <message>

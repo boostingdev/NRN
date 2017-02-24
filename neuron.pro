@@ -142,8 +142,8 @@ contains(USE_DBUS, 1) {
     QT += dbus
 }
 
-contains(SHADOW_NEED_QT_PLUGINS, 1) {
-    DEFINES += SHADOW_NEED_QT_PLUGINS
+contains(NEURON_NEED_QT_PLUGINS, 1) {
+    DEFINES += NEURON_NEED_QT_PLUGINS
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs qtaccessiblewidgets
 }
 

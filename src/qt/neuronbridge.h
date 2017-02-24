@@ -1,5 +1,5 @@
-#ifndef SHADOWBRIDGE_H
-#define SHADOWBRIDGE_H
+#ifndef NEURONBRIDGE_H
+#define NEURONBRIDGE_H
 
 class NeuronGUI;
 class TransactionModel;
@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE QString getPubKey(QString address);
     /** Derive the address for a pubkey */
     Q_INVOKABLE QString addressForPubKey(QString pubkey);
-    
+
     /** Show debug dialog */
     Q_INVOKABLE QVariantMap userAction(QVariantMap action);
 
@@ -137,4 +137,4 @@ private slots:
 
 };
 
-#endif // SHADOWBRIDGE_H
+#endif // NEURONBRIDGE_H
