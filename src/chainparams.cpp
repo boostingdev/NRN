@@ -25,7 +25,7 @@ int64_t CChainParams::GetProofOfWorkReward(int nHeight, int64_t nFees) const
     int64_t nSubsidy = 0;
 
     if (nHeight <= 1)
-        nSubsidy = 25000;
+        nSubsidy = 50000;
     else
     if (nHeight <= nLastFairLaunchBlock)
         nSubsidy = 1 * COIN;
@@ -162,10 +162,24 @@ public:
 
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce   = 411540;
+
+        hashGenesisBlock = uint256("0x01");
+          if (true && genesis.GetHash() != hashGenesisBlock)
+            {
+              Logprintf("recalculating params for mainnet.\n");
+              Logprintf("old mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+              Logprintf("old mainnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
+              // deliberately empty for loop finds nonce value.
+              for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ }
+              Logprintf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+              Logprintf("new mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+              Logprintf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+            }
+
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x8f9f7f85a22df9d62df2a3a11b7bcf376a14a0a16e217c16f7d71bc68c1b18b2"));
-        assert(genesis.hashMerkleRoot == uint256("0x8460d1df654f85d4626dffd47738db1a6cdc9df3a84e1ba361da39eacb479f46"));
+        assert(hashGenesisBlock == uint256("0x"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(53).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(125).convert_to_container<std::vector<unsigned char> >();
