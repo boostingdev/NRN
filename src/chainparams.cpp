@@ -105,30 +105,27 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
     }
 }
 
-void MineGenesis(CBlock genesis, uint256 bnProofOfWorkLimit){
-    // This will figure out a valid hash and Nonce if you're creating a differe$
-    uint256 hashTarget = bnProofOfWorkLimit;
+void MineGenesis(CBlock genesis){
+    // This will figure out a valid hash and Nonce if you're creating a different genesis block:
+    uint256 hashTarget = CBigNum().SetCompact(Params().ProofOfWorkLimit().GetCompact()).getuint256();
     printf("Target: %s\n", hashTarget.GetHex().c_str());
     uint256 newhash = genesis.GetHash();
     uint256 besthash;
     memset(&besthash,0xFF,32);
     while (newhash > hashTarget) {
-        ++genesis.nNonce;
+    	++genesis.nNonce;
         if (genesis.nNonce == 0){
             printf("NONCE WRAPPED, incrementing time");
             ++genesis.nTime;
         }
-    newhash = genesis.GetHash();
-    if(newhash < besthash){
-        besthash=newhash;
-        printf("New best: %s\n", newhash.GetHex().c_str());
+	newhash = genesis.GetHash();
+	if(newhash < besthash){
+	    besthash=newhash;
+	    printf("New best: %s\n", newhash.GetHex().c_str());
+	}
     }
-    }
-    printf("Gensis Hash: %s\n", genesis.GetHash().ToString().c_str());
-    printf("Gensis Hash Merkle: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-    printf("Gensis nTime: %u\n", genesis.nTime);
-    printf("Gensis nBits: %08x\n", genesis.nBits);
-    printf("Gensis Nonce: %u\n\n\n", genesis.nNonce);
+    printf("Found Genesis, Nonce: %ld, Hash: %s\n", genesis.nNonce, genesis.GetHash().GetHex().c_str());
+    exit(0);
 }
 
 class CBaseChainParams : public CChainParams {
@@ -190,7 +187,7 @@ public:
         genesis.nNonce   = 411540;
         hashGenesisBlock = genesis.GetHash();
 
-        if (true) { MineGenesis(genesis, bnProofOfWorkLimit); }
+        if (true) { MineGenesis(genesis); }
 
         assert(hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
