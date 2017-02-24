@@ -184,11 +184,14 @@ public:
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 48);
 
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 411540;
+        genesis.nNonce   = 0;
+
+        //if (true) { MineGenesis(genesis); }
+        printf("%s\n", hash.ToString().c_str());
+        printf("%s\n", hashGenesisBlock.ToString().c_str());
+        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
+
         hashGenesisBlock = genesis.GetHash();
-
-        if (true) { MineGenesis(genesis); }
-
         assert(hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
 
@@ -246,6 +249,9 @@ public:
 
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce = 0;
+
+        if (true) { MineGenesis(genesis); }
+
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x"));
 
@@ -290,6 +296,8 @@ public:
         genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
+
+        if (true) { MineGenesis(genesis); }
 
         assert(hashGenesisBlock == uint256("0x"));
 
