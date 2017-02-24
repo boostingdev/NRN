@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[neuroncore.neuron_qt]
+file_filter = src/qt/locale/neuron_<lang>.ts
+source_file = src/qt/locale/neuron_en.ts
+source_lang = en
+type = QT
+

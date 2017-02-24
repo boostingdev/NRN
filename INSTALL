@@ -1,0 +1,9 @@
+Building Neuron
+
+See doc/readme-qt.rst for instructions on building Neuron QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Neuron.
+
+See doc/build-*.txt for instructions on building neurond,
+the intended-for-services, no-graphical-interface, reference
+implementation of Neuron.
