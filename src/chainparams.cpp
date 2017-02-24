@@ -187,7 +187,7 @@ public:
         genesis.nNonce   = 0;
 
         //if (true) { MineGenesis(genesis); }
-        printf("%s\n", hash.ToString().c_str());
+        printf("%s\n", genesis.GetHash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
 
