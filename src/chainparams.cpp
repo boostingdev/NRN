@@ -125,7 +125,7 @@ void MineGenesis(CBlock genesis){
 	}
     }
     printf("Found Genesis, Nonce: %ld, Hash: %s\n", genesis.nNonce, genesis.GetHash().GetHex().c_str());
-    exit(0);
+    printf("Gensis Hash Merkle: %s\n", genesis.hashMerkleRoot.ToString().c_str());
 }
 
 class CBaseChainParams : public CChainParams {
@@ -186,10 +186,7 @@ public:
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce   = 0;
 
-        //if (true) { MineGenesis(genesis); }
-        printf("%s\n", genesis.GetHash.ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
-        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
+        MineGenesis(genesis);
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x"));
