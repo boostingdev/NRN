@@ -105,29 +105,6 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
     }
 }
 
-void MineGenesis(CBlock genesis){
-    // This will figure out a valid hash and Nonce if you're creating a different genesis block:
-    uint256 hashTarget = CBigNum().SetCompact(Params().ProofOfWorkLimit().GetCompact()).getuint256();
-    printf("Target: %s\n", hashTarget.GetHex().c_str());
-    uint256 newhash = genesis.GetHash();
-    uint256 besthash;
-    memset(&besthash,0xFF,32);
-    while (newhash > hashTarget) {
-    	++genesis.nNonce;
-        if (genesis.nNonce == 0){
-            printf("NONCE WRAPPED, incrementing time");
-            ++genesis.nTime;
-        }
-	newhash = genesis.GetHash();
-	if(newhash < besthash){
-	    besthash=newhash;
-	    printf("New best: %s\n", newhash.GetHex().c_str());
-	}
-    }
-    printf("Found Genesis, Nonce: %ld, Hash: %s\n", genesis.nNonce, genesis.GetHash().GetHex().c_str());
-    printf("Gensis Hash Merkle: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-}
-
 class CBaseChainParams : public CChainParams {
 public:
     CBaseChainParams() {
@@ -184,13 +161,10 @@ public:
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 48);
 
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 0;
-
-        MineGenesis(genesis);
-
+        genesis.nNonce   = 2085036;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x0000060d6aaaf8d5f835567060dcfbff843677d10b92ef0e0036cb9b126a9ff0"));
+        assert(genesis.hashMerkleRoot == uint256("0x0984ae66711967e81694855a7ae289dcb48a439e1f35034a67658df749f29b71"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(53).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(125).convert_to_container<std::vector<unsigned char> >();
@@ -245,12 +219,9 @@ public:
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 16);
 
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 0;
-
-        if (true) { MineGenesis(genesis); }
-
+        genesis.nNonce = 2085036;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x0000060d6aaaf8d5f835567060dcfbff843677d10b92ef0e0036cb9b126a9ff0"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(127).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(196).convert_to_container<std::vector<unsigned char> >();
@@ -290,13 +261,10 @@ public:
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
         genesis.nTime = 1411111111;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 0;
+        genesis.nNonce = 2085036;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
-
-        if (true) { MineGenesis(genesis); }
-
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x0000060d6aaaf8d5f835567060dcfbff843677d10b92ef0e0036cb9b126a9ff0"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }
