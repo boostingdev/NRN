@@ -215,7 +215,7 @@ public:
         nFirstPosv2Block = 1;
         nFirstPosv3Block = 2;
 
-        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
+        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 16);
 
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
