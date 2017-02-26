@@ -122,6 +122,7 @@ public:
         genesis.nTime    = GENESIS_BLOCK_TIME;
 
         vSeeds.push_back(CDNSSeedData("getneuron.com",  "getneuron.com"));
+        vSeeds.push_back(CDNSSeedData("seed.getneuron.com",  "seed.getneuron.com"));
     }
     virtual const CBlock& GenesisBlock() const { return genesis; }
     virtual const std::vector<CAddress>& FixedSeeds() const {
