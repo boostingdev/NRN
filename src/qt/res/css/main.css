@@ -346,7 +346,7 @@ article {
     border-width: 1px 0 0 0;
     background: #ecf0f1;
     overflow:auto;
-    box-neuron:0 -1px 0 0 #dee2e2,
+    box-shadow:0 -1px 0 0 #dee2e2,
                0 -2px 0 0 #f8f8f8;
 }
 
@@ -369,7 +369,7 @@ article {
     background: inherit;
     padding: 10px;
     cursor: pointer;
-    box-neuron: -1px -1px 0 0 #dee2e2, -1px 1px 0 0 #dee2e2, -2px -2px 0 0 #f8f8f8, -2px 2px 0 0 #f8f8f8;
+    box-shadow: -1px -1px 0 0 #dee2e2, -1px 1px 0 0 #dee2e2, -2px -2px 0 0 #f8f8f8, -2px 2px 0 0 #f8f8f8;
     z-index: 10000;
 }
 
@@ -569,16 +569,16 @@ article {
             background: #131218;
             border-radius: 50px;
             padding: 2px;
-            box-neuron: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+            box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
     }
 
     progress::-webkit-progress-value {
             border-radius: 50px;
-            box-neuron: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
             background:
                     -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
                     -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-                    -webkit-linear-gradient(left, #e5203d, #e41c39);
+                    -webkit-linear-gradient(left, #0067c8, #3c90df);
 
             /* Looks great, now animating it */
             background-size: 25px 14px, 100% 100%, 100% 100%;
@@ -802,13 +802,13 @@ small screens.
     -moz-osx-font-smoothing: grayscale;
 }
 
-.footable.neuron {
+.footable.shadow {
     border-color: #e5203d;
 }
-.footable.neuron > tfoot > tr > th,
-.footable.neuron > thead > tr > th,
-.footable.neuron > tfoot > tr > td,
-.footable.neuron > thead > tr > td {
+.footable.shadow > tfoot > tr > th,
+.footable.shadow > thead > tr > th,
+.footable.shadow > tfoot > tr > td,
+.footable.shadow > thead > tr > td {
     background-color: #e5203d;
     border-color: #e5203d;
 }
@@ -1252,8 +1252,8 @@ label.recipient {
 
 .button:active,
 .button.is-active {
-  -webkit-box-neuron: none;
-  box-neuron: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   text-decoration: none;
 }
 
@@ -1734,9 +1734,9 @@ label.recipient {
     padding: 10px;
     border-radius: 5px;
     margin-left: 10px;
-    -webkit-box-neuron:  1px 1px 5px rgba(0,0,0,.15);
-    -moz-box-neuron:  1px 1px 5px rgba(0,0,0,.15);
-    box-neuron: 1px 1px 5px rgba(0,0,0,.15);
+    -webkit-box-shadow:  1px 1px 5px rgba(0,0,0,.15);
+    -moz-box-shadow:  1px 1px 5px rgba(0,0,0,.15);
+    box-shadow: 1px 1px 5px rgba(0,0,0,.15);
     font-size: 15px;
     max-width: 75%;
     overflow-wrap: break-word;
@@ -2214,7 +2214,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     width: 800px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
 }
 
@@ -2224,7 +2224,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     width: 800px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
 }
 
@@ -2234,7 +2234,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     width: 750px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
     position: absolute;
 }
@@ -2262,7 +2262,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     width: 800px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
     position: absolute;
 }
@@ -2300,7 +2300,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     width: 400px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
 }
 
@@ -2321,7 +2321,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     height: 480px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
     overflow: auto;
 }
@@ -2333,7 +2333,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     height: 480px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
     overflow: auto;
 }
@@ -2346,7 +2346,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     height: 480px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
     overflow: auto;
 }
@@ -2358,7 +2358,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     height: 320px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
     overflow: auto;
 }
@@ -2373,7 +2373,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     width: 630px;
     background: #fff;
     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-    box-neuron: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-neuron: 0 0 4px rgba(0,0,0,0.7); -moz-box-neuron: 0 0px 4px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
     display: none;
 }
 
@@ -2398,7 +2398,7 @@ Hides the menu at `56.625em`, but modify this based on your app's needs.
     font-size:0.8em;
     color: #F51E3E;
     background: #ecf0f1;
-    box-neuron: -1px -1px 0 0 #dee2e2, -1px 1px 0 0 #dee2e2, -2px -2px 0 0 #f8f8f8, -2px 2px 0 0 #f8f8f8;
+    box-shadow: -1px -1px 0 0 #dee2e2, -1px 1px 0 0 #dee2e2, -2px -2px 0 0 #f8f8f8, -2px 2px 0 0 #f8f8f8;
 }
 
 .network-alerts-icon {
