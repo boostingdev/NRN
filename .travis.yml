@@ -9,7 +9,7 @@ matrix:
 env:
   global:
     - MAKEJOBS=-j3
-    - DEPS_URL=http://40.71.87.110/
+    - DEPS_URL=https://download.getneuron.com/
   matrix:
     - BUILD=win32 HOST=i686-w64-mingw32   DISTNAME=i686-win   PACKAGES="mingw-w64 g++-mingw-w64" BITS=32 MAKEFILE=makefile.linux-mingw BOOST_LIB_SUFFIX="-mt-s" OUTPUT_SUFFIX=".exe" QMAKEOPTS="-xplatform win32-g++" BOOST_THREAD_LIB_SUFFIX="_win32-mt-s"
     - BUILD=win64 HOST=x86_64-w64-mingw32 DISTNAME=x86_64-win PACKAGES="mingw-w64 g++-mingw-w64" BITS=64 MAKEFILE=makefile.linux-mingw BOOST_LIB_SUFFIX="-mt-s" OUTPUT_SUFFIX=".exe" QMAKEOPTS="-xplatform win32-g++" BOOST_THREAD_LIB_SUFFIX="_win32-mt-s"

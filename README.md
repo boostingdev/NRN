@@ -1,4 +1,4 @@
-![Neuron Logo](https://i.imgur.com/ovemJA3.png)
+Neuron V1.0.0.0
 
 [![Build Status](https://travis-ci.org/getneuron/neuron.svg?branch=master)](https://travis-ci.org/getneuron/neuron)
 
