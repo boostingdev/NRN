@@ -37,7 +37,7 @@
         <li><a href=#messages id=chat-menu-link onclick=scrollMessages()><span class="title translate">Chat</span> <span class=icon-thumbnail><i class="fa fa-comment"></i> </span><span class=details><span class=user-notifications><span id=message-count>0</span> </span><span class=translate>Notifications</span></span></a>
         <li><a href=#options><span class="title translate">Options</span> <span class=icon-thumbnail><i class="fa fa-wrench"></i></span></a>
         <li>
-          <a href=#><span class="title translate">Wallet Management</span> <span class=arrow></span> <span class=icon-thumbnail><i class="fa fa fa-key"></i></span></a>
+          <a href=#><span class="title translate">Manage Wallet</span> <span class=arrow></span> <span class=icon-thumbnail><i class="fa fa fa-key"></i></span></a>
           <ul class=sub-menu>
             <li><a href=#walletmanagement onclick='$("#walletmanagement-advanced").hide(),$("#key-options").hide(),$("#wizards").show(),gotoWizard("new-key-wizard",0,!0)'><span class=translate>Add New Wallet</span> <span class=icon-thumbnail><i class="fa fa-key"></i></span></a>
             <li><a href=#walletmanagement onclick='$("#walletmanagement-advanced").hide(),$("#key-options").hide(),$("#wizards").show(),gotoWizard("recover-key-wizard",0,!0)'><span class=translate>Import Wallet</span> <span class=icon-thumbnail><i class="fa fa-repeat"></i></span></a>
@@ -568,7 +568,7 @@
                             </div>
                           </div>
                           <hr class=no-margin>
-                          <div style=height:456px>
+                          <div style=height:450px>
                             <table class="table table-condensed table-hover" id=recenttxns>
                               <thead>
                                 <tr>
@@ -594,7 +594,7 @@
             <div class=page-content-wrapper>
               <nav class="navbar navbar-default nav-sub-menu p-t-10 p-r-35 p-l-35" style="min-height:75px;border-bottom:1px solid #dae1e9 !important;margin-bottom:0!important" role=navigation>
                 <div class=pull-left>
-                  <h4 class="translate uppercase" style=font-weight:bolder>Market</h4>
+                  <h4 class="translate uppercase" style=font-weight:bolder>NeuroNode</h4>
                 </div>
                 <div class=pull-right></div>
                 <div class=container-fluid>
@@ -604,18 +604,17 @@
               <div class=row>
                 <div class="col-sm-12 bg-white" style=height:100px%;min-height:100%>
                   <div class="col-sm-6 col-sm-offset-3 bg-white p-t-30" style=text-align:center;padding-top:100px>
-                    <img src=qrc:///assets/img/shoppingcart.png>
-                    <h1>UMBRA MARKETPLACE</h1>
-                    <p>under development
+                    <h1>NeuroNode</h1>
+                    <p>Currently Under Development
                   </div>
                   <div class="col-sm-6 bg-white" style=text-align:right;padding-top:100px>
-                    <h5>GET IN TOUCH AND CONTRIBUTE</h5>
-                    <p style=opacity:6>Join us on <a href=https://neuronproject.slack.com target=_blank>Slack</a> (get <a href=https://slack.neuronproject.io target=_blank>invite here</a>)
+                    <h5>GET IN TOUCH WITH US OR CONTRIBUTE!</h5>
+                    <p style=opacity:6>Join us on <a href=https://getneuron.slack.com target=_blank>Slack</a> 
                   </div>
                   <div class="col-sm-6 bg-white m-t-130" style=padding-top:100px>
-                    <h5>DONATE AND SUPPORT DEVELOPMENT</h5>
-                    <p style=opacity:6><a href="javascript:sendPage.addRecipientDetail('SdcDevWEbq3CZgZc8UNbST1TaYLA5vLZTS', 'NRN Dev Fund', 'keep up the work!', 5)">SdcDevWEbq3CZgZc8UNbST1TaYLA5vLZTS</a>
-                    <p style=opacity:6><a href="bitcoin:1GiosBkSpN8RS9pm1kgZU8AZUBEnLKYFem&label=NRN%20Dev%20Fund">1GiosBkSpN8RS9pm1kgZU8AZUBEnLKYFem</a>
+                    <h5>DONATE AND/OR SUPPORT DEVELOPMENT</h5>
+                    <p style=opacity:6><a href="javascript:sendPage.addRecipientDetail('', 'Neuro Dev Fund', 'Heres a donation, keep up the good work!', 5)">Insert Neuron Address</a>
+                    <p style=opacity:6><a href="bitcoin:16JLjMvL7rRDFmV3JF8s8uhSy91DAobVBK&label=NRN%20Dev%20Fund">16JLjMvL7rRDFmV3JF8s8uhSy91DAobVBK</a>
                   </div>
                 </div>
               </div>
